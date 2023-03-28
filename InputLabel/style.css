@@ -1,0 +1,25 @@
+.page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.field{
+    position: relative;
+    margin-top:20px;
+}
+input:focus ~ label, input:not(:placeholder-shown) ~ label {
+    top:-10px;
+    font-size:13px;
+    background-color: white;
+}
+label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 2px;
+    transition: 300ms ease all;
+    font-size: 15px;
+}
