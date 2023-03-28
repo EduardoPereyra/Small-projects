@@ -1,0 +1,578 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #4c4d5f;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav img {
+    max-height: 40px;
+}
+
+nav > ul {
+    display: flex;
+}
+
+nav > ul > li {
+    padding: 10px 20px;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+nav .buttons-container button {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+nav .buttons-container button:hover, nav > ul > li:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+nav .buttons-container button:nth-child(1) {
+    border: 1px solid #00b289;
+    background-color: #f3fbff;
+    color: #00b289;
+}
+
+nav .buttons-container button:nth-child(2) {
+    background-color: #00b289;
+    border: 1px solid #00b289;
+    color: white;
+}
+
+/* The dropdown container */
+.dropdown {
+    /*float: left;*/
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #4c4d5f;
+    /*padding: 14px 16px;*/
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown .dropbtn i {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    /*background-color: red;*/
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
+    -webkit-box-shadow: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
+    -moz-box-shadow: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
+    background-color: white;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: #4c4d5f;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    /*background-color: #ececec;*/
+    outline: 1px solid #00b289;
+    border-radius: 5px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.box {
+    position: absolute;
+    z-index: -1;
+    height: 100vw;
+    width: 100vw;
+    background-color: #f3fbff;
+    transform: rotate(60deg);
+    right: -40vw;
+    top: -100vh;
+}
+
+.page {
+    padding: 0 15vw;
+    margin-top: 10vh;
+}
+
+.plans-and-pricing > div:first-child,
+.plans-and-pricing > div:first-child > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plans-and-pricing > div:first-child > div {
+    text-transform: uppercase;
+    font-size: .6em;
+    position: relative;
+}
+
+.plans-and-pricing .promotion-label {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    color: #00b289;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.plans-and-pricing .promotion-label img {
+    width: 50px;
+    transform: rotate(315deg);
+    position: absolute;
+    left: 85px;
+    top: 20px;
+}
+
+
+.plans-and-pricing > div:first-child > div h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.plans-and-pricing h1,
+.add-ons-container > h1 {
+    font-family: 'Bellefair', serif;
+    font-weight: normal;
+    font-size: 2.25em;
+}
+
+/* The switch - the box around the slider */
+.plans-and-pricing .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 30px;
+}
+
+/* Hide default HTML checkbox */
+.plans-and-pricing .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.plans-and-pricing .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.plans-and-pricing .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.plans-and-pricing input:checked + .slider {
+    background-color: #00b289;
+}
+
+.plans-and-pricing input:focus + .slider {
+    box-shadow: 0 0 1px #00b289;
+}
+
+.plans-and-pricing input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.plans-and-pricing .slider.round {
+    border-radius: 34px;
+}
+
+.plans-and-pricing .slider.round:before {
+    border-radius: 50%;
+}
+
+.cards {
+    display: flex;
+    margin-top: 20px;
+}
+
+.cards .card:first-child {
+    margin-right: 30px;
+}
+
+.cards .card:last-child {
+    margin-left: 30px;
+}
+
+.cards h2 {
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.card {
+    background-color: white;
+}
+
+.cards .card {
+    width: 50%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 50px;
+    position: relative;
+    background-color: white;
+
+}
+
+.cards .card label {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.card .header label span:nth-child(1) {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 15px;
+    font-size: 1.2em;
+}
+
+.cards .card label > span:nth-child(2) {
+    font-size: 2.6em;
+    padding-left: 5px;
+}
+
+.card .header {
+    border-bottom: 3px solid #00b289;
+    padding-bottom: 10px;
+}
+
+.card ul {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.card ul li {
+    padding: 10px 15px;
+    list-style-image: url(https://assets-global.website-files.com/635ac9564cc3682ce1536786/637637410d31673cc7050386_green%20check.svg);
+}
+
+.card ul li span {
+    background-color: #f8db62;
+    color: white;
+    font-weight: bold;
+    padding: 3px 4px;
+    font-size: .7em;
+}
+
+.card button {
+    margin-top: 20px;
+    background-color: #00b289;
+    border: 1px solid #00b289;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 25px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.card button:hover {
+    scale: 1.1;
+}
+
+.card .best-seller {
+    background: #00b289;
+    color: white;
+    position: absolute;
+    top: 48px;
+    right: -48px;
+    transform: rotate(45deg);
+    padding: 7px 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card .best-seller:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-top: 40px solid #f3fbff;
+    border-right: 40px solid transparent;
+    width: 0;
+}
+
+.card .best-seller:after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-top: 40px solid #f3fbff;
+    border-left: 40px solid transparent;
+    width: 0;
+}
+
+.add-ons-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 30px;
+}
+
+.add-ons-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-ons-container .card {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 5px;
+    margin: 5px 0;
+    box-shadow: 0 0 50px -12px rgba(189, 189, 189, 0.43);
+    -webkit-box-shadow: 0 0 50px -12px rgba(189, 189, 189, 0.43);
+    -moz-box-shadow: 0 0 50px -12px rgba(189, 189, 189, 0.43);
+}
+
+.add-ons-container .card div:first-child h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.add-ons-container .card div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-ons-container .card div:last-child p {
+    text-transform: uppercase;
+}
+
+.add-ons-container .card div:last-child h1 {
+    font-weight: 500;
+    font-size: 2.25em;
+}
+
+.add-ons-container .card h1,
+.add-ons-container .card p {
+    margin: 0;
+}
+
+.add-ons-container .card a {
+    margin-top: 15px;
+    display: block;
+    color: #00b289;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+.add-ons-container .card a i {
+    transform: rotate(-90deg);
+}
+
+.business-container {
+    background-color: #f3fbff;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.business-container div h1 {
+    font-family: 'Bellefair', serif;
+    font-weight: normal;
+    font-size: 3em;
+    margin: 0;
+}
+
+.business-container div h1 span {
+    color: #00b289;
+}
+
+.business-container button {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 5px;
+    background-color: #00b289;
+    border: 1px solid #00b289;
+    color: white;
+    height: 60px;
+    width: 20%;
+}
+
+.faq {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq h1 {
+    font-weight: lighter;
+    font-size: 2.5em;
+    color: #00b289;
+}
+
+.faq .question {
+    width: 80%;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.question .collapsible
+/*footer li div .collapsible*/
+{
+    background-color: white;
+    color: #4c4d5f;
+    cursor: pointer;
+    padding-top: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.6em;
+}
+
+.question .collapsible i {
+    float: right;
+    color: lightgrey;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: white;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.question .content,
+footer li div .content{
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 15vw;
+    margin-top: 20vh;
+    margin-bottom: 50px;
+}
+
+footer>div {
+    padding: 0 50px;
+}
+
+footer div h1 {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+footer div h2 {
+    font-size: 1em;
+    margin-top: 40px;
+}
+
+footer > div > ul {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+footer div ul li {
+    list-style-type: none;
+    line-height: 2;
+    color: #9f9f9f;
+}
+
+footer li div .collapsible {
+    border: none;
+    background-color: white;
+    font-size: 1em;
+    color: #9f9f9f;
+    padding: 0;
+    margin: 0;
+}
+
+footer li div .collapsible i {
+    color: #4c4d5f;
+}
+
+footer li .content ul{
+    padding-left: 0;
+}
+
+footer .pricing {
+    margin-top: 40px;
+}
+
+footer .pricing label {
+    color: #00b289;
+}
+
+footer .pricing p{
+    color: #9f9f9f;
+    margin: 0;
+    line-height: 2;
+}

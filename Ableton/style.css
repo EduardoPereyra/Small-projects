@@ -1,0 +1,379 @@
+body {
+    margin: 0;
+    font-family: futura-pt, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+nav {
+    border-bottom: 1px solid lightgrey;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+}
+
+nav, nav div, nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li, .left-menu a {
+    padding: 0 10px;
+    cursor: pointer;
+    height: 100%;
+    font-weight: bold;
+}
+
+nav ul li:hover, .left-menu a:hover, .secondary-navbar a:hover {
+    padding-bottom: 3px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.menu-logo {
+    margin: 20px 0 20px 30px;
+}
+
+.left-menu a:nth-child(1) {
+    color: #0000ff;
+}
+
+.primary-navbar {
+    z-index: 99;
+}
+
+.secondary-navbar {
+    /*position: fixed;*/
+    justify-content: left;
+    border-bottom: none;
+    background-color: rgba(255, 255, 255, .9);
+    top: 70px;
+    z-index: 98;
+    padding-left: 20px;
+}
+
+.secondary-navbar a {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.secondary-navbar a:first-child {
+    color: #ff764d;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.company-logo-container {
+    background-image: url(https://ableton-production.imgix.net/about/header.jpg?auto=format&fit=crop&fm=jpg&h=512&ixjsv=1.1.3&w=1091);
+    background-size: cover;
+    height: 80vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10vw;
+}
+
+.company-logo-container h1 {
+    font-size: 9em;
+    font-weight: bold;
+    color: #ff764d;
+}
+
+.page-about-text {
+    width: 50vw;
+    margin: 0 auto 8.33333vw;
+    padding: 0 10vw;
+}
+
+.page-about-text h2 {
+    font-weight: bold;
+    font-family: futura-pt, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.875rem;
+    line-height: 1.4;
+}
+
+.page-about-text p {
+    font-weight: lighter;
+    font-family: futura-pt, Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+}
+
+.page-about-text h2 a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.page-about-images {
+    padding: 0 10vw;
+    margin-bottom: 8.33333vw;
+}
+
+.page-about-images img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.page-about-collage {
+    position: relative;
+    margin-bottom: 8.33333vw;
+}
+
+.page-about-collage div:first-child {
+    width: 70vw;
+    background-color: #fbffa7;
+    position: relative;
+    z-index: -1;
+    left: 40vw;
+    height: 90vh;
+}
+
+.page-about-collage div:nth-child(2) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://ableton-production.imgix.net/about/photo-1.jpg?fit=crop&h=545&ixjsv=1.1.3&w=545);
+    position: absolute;
+    height: 60vh;
+    width: 40vw;
+    left: 10vw;
+    top: 10vh;
+}
+
+.page-about-collage div:last-child {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://ableton-production.imgix.net/about/photo-2.jpg?fit=crop&h=327&ixjsv=1.1.3&w=436);
+    position: absolute;
+    height: 40vh;
+    width: 30vw;
+    right: 10vw;
+    top: 20vh;
+}
+
+.page-about-collage-people {
+    position: relative;
+    margin-bottom: 8.33333vw;
+}
+
+.page-about-collage-people > div:nth-child(1) {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+    background-color: #b6ffc0;
+    padding: 150px 250px 150px 10vw;
+}
+
+.page-about-collage-people > div:nth-child(1) div {
+    width: 33.33333vw;
+    height: 25vw;
+}
+
+.page-about-collage-people > div:nth-child(1) div:nth-child(1) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://ableton-production.imgix.net/about/photo-3.jpg?dpr=2&fit=crop&h=327&ixjsv=1.1.3&q=50&w=436);
+}
+
+.page-about-collage-people > div:nth-child(1) div:last-child {
+    margin-top: 8.33333vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://ableton-production.imgix.net/about/photo-4.jpg?dpr=2&fit=crop&h=327&ixjsv=1.1.3&q=50&w=436);
+}
+
+.page-about-collage-people > div:last-child {
+    width: 41.66667vw;
+    height: 41.66667vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://ableton-production.imgix.net/about/photo-5.jpg?dpr=2&fit=crop&h=545&ixjsv=1.1.3&q=50&w=545);
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+    position: absolute;
+    right: 10vw;
+    top: 25%;
+}
+
+.page-about-collage-class {
+    padding: 0 10vw;
+    position: relative;
+    margin-bottom: 8.33333vw;
+    height: 80vh;
+}
+
+.page-about-collage-class div:first-child {
+    width: 60vw;
+    height: 80vh;
+    position: absolute;
+    background-color: #d5b3ff;
+    z-index: -1;
+    margin: 0 10vw;
+}
+
+.page-about-collage-class div:nth-child(2) {
+    width: 30vw;
+    height: 400px;
+    margin-top: 8.33333vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://ableton-production.imgix.net/about/photo-6-a.jpg?fit=crop&h=327&ixjsv=1.1.3&w=436);
+    position: absolute;
+}
+
+.page-about-collage-class div:last-child {
+    width: 40vw;
+    height: 500px;
+    margin-top: calc(8.33333vw - 50px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(https://ableton-production.imgix.net/about/photo-7.jpg?fit=crop&h=545&ixjsv=1.1.3&w=545);
+    position: absolute;
+    right: 10vw;
+}
+
+.page-about-card {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    margin: 0 10vw 8.33333vw;
+}
+
+.page-about-card div:nth-child(1) {
+    background-image: url(https://ableton-production.imgix.net/about/photo-8.jpg?crop=right&fit=crop&h=545&ixjsv=1.1.3&w=545);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 50%;
+    height: 70vh;
+}
+
+.page-about-card div:nth-child(2) {
+    background-color: #b1c5ff;
+    height: 70vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page-about-card div:nth-child(2) p,
+.page-about-card div:nth-child(2) a {
+    padding: 0 25%;
+    font-size: 1.5em;
+}
+
+.page-about-card div:nth-child(2) a {
+    color: blue
+}
+
+footer {
+    border-top: 1px solid lightgrey;
+    padding: 50px 10vw;
+}
+
+footer > h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+footer li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+footer li svg {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.footer-outer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-outer-links ul {
+    padding: 0;
+    margin: 50px 0;
+}
+
+.footer-outer-links ul li h1 {
+    font-size: 1em;
+}
+
+.footer-outer-links ul .footer-input {
+    display: flex;
+    margin-top: 15px;
+}
+
+.footer-outer-links ul .footer-input input,
+.footer-outer-links ul .footer-input select {
+    width: 100%;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border: none;
+}
+
+.footer-outer-links ul .footer-input select {
+    margin: 5px 5px 5px 0;
+}
+
+.footer-outer-links ul .footer-input button {
+    width: 40%;
+    padding: 15px 10px;
+    background-color: #0000ff;
+    color: white;
+    border: none;
+}
+
+.footer-inner-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-inner-links ul {
+    display: flex;
+    padding: 0;
+}
+
+.footer-inner-links ul li {
+    padding-right: 15px;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+.footer-made-in {
+    display: flex;
+    align-items: center;
+}
+
+.footer-made-in p {
+    margin: 0 10px 0 0;
+    font-size: .8em;
+}
