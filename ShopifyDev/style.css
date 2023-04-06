@@ -464,7 +464,7 @@ footer ul .youtube::before {
     --color-stores-number-container: #151d1e;
     --color-cards-background-important: #0d1213;
     --color-cards-background-important-border: 0.125rem solid #9db8f7;
-    --box-shadow-dropdown-content: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
+    --box-shadow-dropdown-content: none; /*0px 0px 50px -12px rgba(189, 189, 189, 0.43);*/
     --box-shadow-card: none /*0 0 50px -12px rgba(189, 189, 189, 0.43)*/;
     --box-shadow-card-hover: 0 4px 0 rgba(0, 0, 0, 0.1);
     --border-card: 2px solid rgba(189, 189, 189, 0.43);
