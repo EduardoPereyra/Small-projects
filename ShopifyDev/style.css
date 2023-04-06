@@ -6,9 +6,29 @@
     src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
 }
 
+:root {
+    --text-color: #707070;
+    --color-background: white;
+    --color-background-hover: #ececec;
+    --color-title: #202223;
+    --color-card-background: #fcfbfc;
+    --color-stores-container: #eafaf3;
+    --color-stores-container-border: none;
+    --color-stores-number-container: #fafbfb;
+    --color-cards-background-important: #f4f6ff;
+    --color-cards-background-important-border: none;
+    --box-shadow-dropdown-content: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
+    --box-shadow-card: 0 0 50px -12px rgba(189, 189, 189, 0.43);
+    --box-shadow-card-hover: 0 4px 0 rgba(0, 0, 0, 0.1);
+    --border-card: 2px solid rgba(189, 189, 189, 0.43);
+    --store-number-box-shadows: 9px 9px 0 0 #000;
+    --store-number-border: 3px solid #000;
+}
+
 body {
     font-family: sans-serif;
     margin: 0;
+    background-color: var(--color-background);
 }
 
 /* The dropdown container */
@@ -27,7 +47,7 @@ body {
     outline: none;
     padding: 10px;
     font-size: .9rem;
-    color: #707070;
+    color: var(--text-color);
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
@@ -48,17 +68,17 @@ body {
     display: none;
     position: absolute;
     min-width: 160px;
-    box-shadow: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
-    -webkit-box-shadow: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
-    -moz-box-shadow: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
-    background-color: white;
+    box-shadow: var(--box-shadow-dropdown-content);
+    -webkit-box-shadow: var(--box-shadow-dropdown-content);
+    -moz-box-shadow: var(--box-shadow-dropdown-content);
+    background-color: var(--color-background);
     z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     float: none;
-    color: #707070;
+    color: var(--text-color);
     padding: 5px 10px;
     text-decoration: none;
     display: block;
@@ -68,7 +88,7 @@ body {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ececec;
+    background-color: var(--color-background-hover);
     border-radius: 5px;
 }
 
@@ -80,7 +100,7 @@ body {
 nav {
     width: 100%;
     position: fixed;
-    background-color: white;
+    background-color: var(--color-background);
     z-index: 1;
 }
 
@@ -99,14 +119,18 @@ nav ul li {
     list-style-type: none;
     padding: 10px;
     font-size: .9rem;
-    color: #707070;
+    color: var(--text-color);
     cursor: pointer;
 }
 
 nav ul li:hover,
 nav > div > button:hover {
     border-radius: 5px;
-    background-color: #ececec;
+    background-color: var(--color-background-hover);
+}
+
+nav > div > button {
+    color: var(--text-color);
 }
 
 nav > div:nth-child(2) {
@@ -121,14 +145,14 @@ nav > div:nth-child(2) {
 .search .icon {
     position: absolute;
     padding: 5px;
-    color: #707070;
+    color: var(--text-color);
     font-size: .7rem;
 }
 
 .search input {
     padding: 5px 5px 5px 25px;
     border-radius: 1rem;
-    border: 1px solid #707070;
+    border: 1px solid var(--text-color);
 }
 
 nav > div > label {
@@ -167,7 +191,7 @@ nav > div > button {
     font-size: 2.5rem;
     font-weight: bold;
     margin: 0;
-    color: #202223;
+    color: var(--color-title);
 }
 
 .hero-text h2 {
@@ -177,7 +201,7 @@ nav > div > button {
 
 .hero-text h2,
 .hero-text p {
-    color: #707070;
+    color: var(--text-color);
 }
 
 .hero .hero-img {
@@ -195,12 +219,12 @@ nav > div > button {
 .card {
     padding: 20px;
     text-align: left;
-    background-color: #fcfbfc;
+    background-color: var(--color-card-background);
     border-radius: 1rem;
-    border: 2px solid rgba(189, 189, 189, 0.43);
-    box-shadow: 0 0 50px -12px rgba(189, 189, 189, 0.43);
-    -webkit-box-shadow: 0 0 50px -12px rgba(189, 189, 189, 0.43);
-    -moz-box-shadow: 0 0 50px -12px rgba(189, 189, 189, 0.43);
+    border: var(--border-card);
+    box-shadow: var(--box-shadow-card);
+    -webkit-box-shadow: var(--box-shadow-card);
+    -moz-box-shadow: var(--box-shadow-card);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -208,11 +232,11 @@ nav > div > button {
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-card-hover);
 }
 
 .start-building .card .content h1 {
-    color: #707070;
+    color: var(--text-color);
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -241,12 +265,13 @@ nav > div > button {
 }
 
 .stores-container {
-    background-color: #eafaf3;
+    background-color: var(--color-stores-container);
+    border: var(--color-stores-container-border);
     padding: 50px 30px;
     border-radius: 1rem;
     margin: 20px;
     display: flex;
-    color: #707070;
+    color: var(--text-color);
 }
 
 .stores-numbers,
@@ -264,7 +289,7 @@ nav > div > button {
 }
 
 .stores-text p a {
-    color: #707070;
+    color: var(--text-color);
 }
 
 .stores-numbers {
@@ -273,9 +298,9 @@ nav > div > button {
     place-self: end;
     max-width: 400px;
     padding: 5rem 4rem;
-    border: 3px solid #000;
-    background-color: #fafbfb;
-    box-shadow: 9px 9px 0 0 #000;
+    border: var(--store-number-border);
+    background-color: var(--color-stores-number-container);
+    box-shadow: var(--store-number-box-shadows);
     margin: auto;
 }
 
@@ -335,6 +360,7 @@ nav > div > button {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 15px;
+    color: var(--text-color);
 }
 
 .cards-container .card .text h1 {
@@ -355,8 +381,8 @@ nav > div > button {
 }
 
 .cards-container .card:first-child {
-    background-color: #f4f6ff;
-    border: none;
+    background-color: var(--color-cards-background-important);
+    border: var(--color-cards-background-important-border);
 }
 
 .cards-container .card:first-child .text h1::after {
@@ -365,18 +391,18 @@ nav > div > button {
 
 .cards-container .card:first-child:hover {
     transform: none;
-    box-shadow: 0 0 50px -12px rgba(189, 189, 189, 0.43);
+    box-shadow: var(--box-shadow-card);
     cursor: default;
 }
 
 footer {
     display: flex;
     justify-content: space-between;
-    background-color: #fafbfb;
+    background-color: var(--color-stores-number-container);
     padding: 50px 30px;
     border-radius: 1rem;
     margin: 20px;
-    color: #707070;
+    color: var(--text-color);
 }
 
 footer ul {
@@ -398,7 +424,7 @@ footer ul .twitter::before,
 footer ul .youtube::before {
     content: '';
     display: inline-block;
-    background-color: #fafbfb;
+    background-color: var(--color-stores-number-container);
     float: left;
     height: 1rem;
     width: 1rem;
@@ -418,3 +444,47 @@ footer ul .twitter::before {
 footer ul .youtube::before {
     background-image: url(https://cdn.shopify.com/shopifycloud/shopify_dev/assets/youtube-e1672f4ec6b07be386c1f2c664b9a8bf9d6b1612e5028a7c0c54468e70db8dab.svg);
 }
+
+.light-mode-icon {
+    display: inline-block;
+}
+
+.dark-mode-icon {
+    display: none;
+}
+
+.dark-mode {
+    --text-color: #eef1f1;
+    --color-background: #0d1213;
+    --color-background-hover: #20292b;
+    --color-title: #eef1f1;
+    --color-card-background: #151d1e;
+    --color-stores-container: #0d1213;
+    --color-stores-container-border: 0.125rem solid #8cfb80;
+    --color-stores-number-container: #151d1e;
+    --color-cards-background-important: #0d1213;
+    --color-cards-background-important-border: 0.125rem solid #9db8f7;
+    --box-shadow-dropdown-content: 0px 0px 50px -12px rgba(189, 189, 189, 0.43);
+    --box-shadow-card: none /*0 0 50px -12px rgba(189, 189, 189, 0.43)*/;
+    --box-shadow-card-hover: 0 4px 0 rgba(0, 0, 0, 0.1);
+    --border-card: 2px solid rgba(189, 189, 189, 0.43);
+    --store-number-box-shadows: none;
+    --store-number-border: var(--border-card);
+}
+
+.dark-mode .light-mode-icon {
+    display: none;
+}
+
+.dark-mode .dark-mode-icon {
+    display: inline-block;
+}
+
+.dark-mode .stores-numbers {
+    border-radius: 10px;
+}
+
+.dark-mode .hero .hero-img {
+    background-image: url("https://cdn.shopify.com/shopifycloud/shopify_dev/assets/home/hero-1-dark-91c0c835d494ced3d0530b1681f8499cdcd0d92f10828d4aa2f876ee8b7c9b5f.png");
+}
+
